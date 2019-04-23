@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Ticket(props){
+function Ticket(props) {
   return (
     <div>
       <style jsx global>{`
@@ -14,13 +14,13 @@ function Ticket(props){
           background-color: red;
         }
         .hr {
-          margin-top: 50px;
+          margin-top: 30px;
         }
       `}</style>
       <div className="ticket">
-      <h3 className="clickable try">{props.location} | {props.names}</h3>
-      <p className="clickable try"><em>{props.issue}</em></p>
-      <hr className="hr"/>
+        <h2 className="clickable try">{props.location} | {props.names}</h2>
+        <h3 className="clickable try"><em>{props.issue}</em></h3>
+        <hr className="hr" />
       </div>
     </div>
   );

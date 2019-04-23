@@ -26,18 +26,9 @@ let masterTicketList = [
 
 function TicketList(){
   return (
-    <div className="tic">
+    <div>
       <style jsx global>{`
-        .nav {
-          color: white;
-          background-color: black;
-          font-family: monospace;
-          font-size: 34px;
-          padding: 20px;
-        }
-        .tic {
-          background-color: white;
-        }
+
       `}</style>
       <hr/>
       {masterTicketList.map((ticket, index) =>
