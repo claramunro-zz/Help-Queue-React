@@ -6,12 +6,6 @@ function Header(){
     <div>
       <style jsx global>{`
         .nav {
-          // color: white;
-          // background-color: black;
-          // font-family: monospace;
-          // font-size: 34px;
-          // padding: 20px;
-
             position: relative;
             font-family: sans-serif;
             text-transform: uppercase;
