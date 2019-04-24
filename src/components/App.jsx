@@ -41,9 +41,9 @@ class App extends React.Component {
         }
       `}</style>
         <Header />
-        <TicketList />
+        
         <Switch>
-          <Route exact path='/' render={() => <TicketList ticketList={this.state.masterTicketList} />} />
+          <Route exact path='/' render={() => <TicketList newList={this.state.masterTicketList} />} />
           <Route path='/newticket' render={() => <NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />} />
           <Route component={Error404} />
         </Switch>
