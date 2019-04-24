@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import grain from '../assets/images/grain.png';
+
 
 function Header(){
   return(
@@ -39,10 +41,14 @@ function Header(){
         Link {
           color: white;
         }
+        img {
+          width: 80px;
+        }
       `}</style>
       <h1 className="nav">The Help Queue</h1>
       <Link to="/"><button>Home</button></Link>
       <Link to="/newticket"><button>Create Ticket</button></Link>
+      <img src={grain}/>
     </div>
   );
 }
