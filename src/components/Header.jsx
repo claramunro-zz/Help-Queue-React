@@ -68,10 +68,37 @@ function Header(){
           .hr {
             margin-top: 30px;
           }
+          .nav {
+            color: white;
+            background-color: black;
+            font-family: monospace;
+            font-size: 34px;
+            padding: 20px;
+            box-shadow: 10px 10px 8px 10px #888888;
+            margin-bottom: 40px;
+          }
+          input, textarea {
+            padding: 1em;
+            background-color: white;
+            border: blue 2px solid;
+            color: blue;
+            cursor: type;
+            margin-right: 1em;
+          }
+          ::placeholder {
+              color: red;
+          }
+          form {
+              padding: 20px;
+          }
+          .formName {
+              background-color: red;
+            }
       `}</style>
       <h1 className="nav">The Help Queue</h1>
       <Link to="/"><button>Home</button></Link>
       <Link to="/newticket"><button>Create Ticket</button></Link>
+      <Link to="/admin"><button>Admin</button></Link>
       <img src={grain}/>
     </div>
   );

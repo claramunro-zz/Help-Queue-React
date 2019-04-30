@@ -2,7 +2,6 @@ import React from 'react';
 import Ticket from './Ticket';
 import PropTypes from 'prop-types';
 
-
 function TicketList(props){
   return (
     <div>
@@ -11,15 +10,19 @@ function TicketList(props){
         <Ticket names={ticket.names}
           location={ticket.location}
           issue={ticket.issue}
-          timeOpen={ticket.timeOpen}
-          key={ticket.id}/>
+          formattedWaitTime={ticket.formattedWaitTime}
+          currentRouterPath={props.currentRouterPath}
+          key={ticket.id}
+          onTicketSelection={props.onTicketSelection}/>
       )}
     </div>
   );
 }
 
 TicketList.propTypes = {
-  newList: PropTypes.array
+  ticketList: PropTypes.array,
+  currentRouterPath: PropTypes.string,
+  onTicketSelection: PropTypes.func
 };
 
 export default TicketList;

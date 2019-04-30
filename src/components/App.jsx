@@ -12,9 +12,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTicketList: []
+      masterTicketList: [],
+      selectedTicket: null
     };
     this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this);
+    this.handleChangingSelectedTicket = this.handleChangingSelectedTicket.bind(this);
   }
 
   componentDidMount() {
@@ -43,6 +45,8 @@ class App extends React.Component {
     this.setState({masterTicketList: newMasterTicketList});
   }
 
+
+
   render(){
     return (
       <div>
@@ -50,12 +54,15 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' render={()=><TicketList ticketList={this.state.masterTicketList} />} />
           <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />} />
-          <Route path='/admin' render={(props)=><Admin ticketList={this.state.masterTicketList} currentRouterPath={props.location.pathname} />} />          <Route component={Error404} />
+          <Route path='/admin' render={(props)=><Admin ticketList={this.state.masterTicketList} currentRouterPath={props.location.pathname}
+              onTicketSelection={this.handleChangingSelectedTicket}
+              selectedTicket={this.state.selectedTicket}/>} />
           <Route component={Error404} />
-       </Switch>
+        </Switch>
       </div>
     );
   }
+
 }
 
 export default App;
