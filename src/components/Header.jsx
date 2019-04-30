@@ -6,6 +6,14 @@ function Header(){
   return(
     <div>
       <style jsx global>{`
+        .columns {
+          display: inline;
+          grid-template-columns: repeat(1fr);
+        }
+      body {
+        font-family: monospace;
+        border: blue 2px solid;
+      }
         .nav {
             position: relative;
             font-family: sans-serif;
@@ -37,17 +45,23 @@ function Header(){
           cursor: pointer;
           margin-right: 1em;
         }
+        button:hover {
+          padding: 1em;
+          background-color: white;
+          border: red 2px solid;
+          color: black;
+          cursor: pointer;
+          margin-right: 1em;
+        }
         Link {
           color: white;
         }
-        img {
-          width: 80px;
-        }
         html {
           height: 100vh;
+          border: 1px red solid;
         }
           body {
-            padding: 100px;
+            padding: 5%;
           }
           .clickable {
             color: black;
@@ -72,23 +86,25 @@ function Header(){
             background-color: black;
             font-family: monospace;
             font-size: 34px;
-            padding: 20px;
+            padding: 2em;
             box-shadow: 10px 10px 8px 10px #888888;
             margin-bottom: 40px;
+            border: 1px solid red;
           }
           input, textarea {
             padding: 1em;
+            margin: 1em;
             background-color: white;
             border: blue 2px solid;
-            color: blue;
+            color: red;
             cursor: type;
-            margin-right: 1em;
+            width: 80%;
           }
           ::placeholder {
               color: red;
           }
           form {
-              padding: 20px;
+              padding: 3em 0 0 0;
           }
           .formName {
               background-color: red;

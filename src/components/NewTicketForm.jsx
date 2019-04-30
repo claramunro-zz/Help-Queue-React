@@ -16,7 +16,7 @@ function NewTicketForm(props){
   }
 
   return (
-    <div>
+    <div className="columns">
       <form onSubmit={handleNewTicketFormSubmission}>
         <input
           type='text'
@@ -28,11 +28,13 @@ function NewTicketForm(props){
           id='location'
           placeholder='Location'
           ref={(input) => {_location = input;}}/>
-        <textarea
+        <input
           id='issue'
           placeholder='Describe your issue.'
-          ref={(textarea) => {_issue = textarea;}}/>
-        <button type='submit'>Help!</button>
+          ref={(input) => {_issue = input;}}/>
+          <div>
+          <button type='submit'>Help!</button>
+          </div>
       </form>
     </div>
   );
