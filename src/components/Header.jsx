@@ -44,6 +44,30 @@ function Header(){
         img {
           width: 80px;
         }
+        html {
+          height: 100vh;
+        }
+          body {
+            padding: 100px;
+          }
+          .clickable {
+            color: black;
+          }
+          .clickable:hover {
+            cursor: pointer;
+            color: red;
+          }
+          .try {
+            color: black;
+            font-family: monospace;
+            font-size: 15px;
+            padding: 5px;
+            padding-left: 25px;
+            background-color: red;
+          }
+          .hr {
+            margin-top: 30px;
+          }
       `}</style>
       <h1 className="nav">The Help Queue</h1>
       <Link to="/"><button>Home</button></Link>
