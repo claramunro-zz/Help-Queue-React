@@ -4,6 +4,8 @@ import TicketList from './TicketList';
 import { Switch, Route } from 'react-router-dom';
 import NewTicketControl from './NewTicketControl';
 import Error404 from './Error404';
+import Admin from './Admin';
+
 import Moment from 'moment';
 
 
