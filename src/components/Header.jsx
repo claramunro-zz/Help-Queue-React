@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import grain from '../assets/images/grain.png';
 
 
 function Header(){
@@ -99,7 +98,6 @@ function Header(){
       <Link to="/"><button>Home</button></Link>
       <Link to="/newticket"><button>Create Ticket</button></Link>
       <Link to="/admin"><button>Admin</button></Link>
-      <img src={grain}/>
     </div>
   );
 }
