@@ -109,6 +109,9 @@ function Header(){
           .formName {
               background-color: red;
             }
+            #highlight{
+              background-color: yellow;
+            }
       `}</style>
       <h1 className="nav">The Help Queue</h1>
       <Link to="/"><button>Home</button></Link>
