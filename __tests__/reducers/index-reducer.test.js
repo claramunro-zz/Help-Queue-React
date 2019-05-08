@@ -2,10 +2,8 @@ import rootReducer from './../../src/reducers/index';
 import selectedTicketReducer from './../../src/reducers/selected-ticket-reducer';
 import ticketListReducer from './../../src/reducers/ticket-list-reducer';
 import { createStore } from 'redux';
-import rootReducer from './reducers/index';
 
-
-const store = createStore(rootReducer);
+let store = createStore(rootReducer);
 
 describe("rootReducer", () => {
 
